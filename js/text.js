@@ -5,6 +5,7 @@ let alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm',
 let zoneTxt = document.getElementById('txt');
 let txt = '';
 let lastpressed = '';
+zoneTxt.innerHTML = txt + " >";
 
 document.onkeypress = (e) => {
     if (e.keyCode === 13) {
@@ -45,7 +46,7 @@ function addCustomWords() {
     if (word !== null) {
         alphabet.push(" " + word + " ");
 
-        alert('Word ' + word + 'added');
+        alert('Word ' + word + ' added');
     } else {
         alert('No word added, you suck.');
     }
