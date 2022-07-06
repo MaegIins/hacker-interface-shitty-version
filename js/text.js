@@ -27,7 +27,9 @@ document.onkeypress = (e) => {
         console.log(txt);
     }
 
-    zoneTxt.innerHTML = txt+" >";
+    zoneTxt.innerHTML = txt + " >";
+
+    console.log(e.key);
 
     lastpressed = e.keyCode;
 }
@@ -35,12 +37,16 @@ document.onkeypress = (e) => {
 
 function addCustomWords() {
 
-    let clear = confirm('Voulez-vous vider la bibliothèque de mots?');
+    let clear = confirm('Do you want to empty the wordlist?');
     if (clear) {
         alphabet = [];
     }
-    let word = prompt('Entrez un mot');
-    alphabet.push(" " + word + " ");
-    //affiche confirmation
-    alert('Le mot ' + word + ' a été ajouté à la bibliotheque de mots');
+    let word = prompt('Your word:');
+    if (word !== null) {
+        alphabet.push(" " + word + " ");
+
+        alert('Word ' + word + 'added');
+    } else {
+        alert('No word added, you suck.');
+    }
 }
