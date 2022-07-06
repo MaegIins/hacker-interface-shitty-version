@@ -14,11 +14,17 @@ document.onkeypress = (e) => {
         txt = txt + '&nbsp;';
     } else if (e.keyCode === 8) {
         txt = txt.slice(0, -1);
+        zoneTxt.innerHTML = txt + " >";
     } else if (e.keyCode === 120) {
         if (lastpressed === 224) {
             addCustomWords();
         }
-    } else {
+    }
+    else if (e.key === 'c') {
+        if (lastpressed === 224) {
+            clear();
+        }
+    }else {
         for (let i = 0; i < Math.floor(Math.random() * 6) + 2; i++) {
             txt = txt + alphabet[Math.floor(Math.random() * alphabet.length)];
         }
@@ -43,4 +49,16 @@ function addCustomWords() {
     } else {
         alert('No word added, you suck.');
     }
+}
+
+function clear(){
+    let clear = confirm('Do you want to empty the wordlist?');
+    if (clear) {
+        txt = '';
+        zoneTxt.innerHTML = txt + " >";
+        alert('Cleared');
+    } else {
+        alert('ok.');
+    }
+
 }
