@@ -4,4 +4,4 @@
 
 
 
-you can add custom words by pressing à and the x.
+you can add custom words by pressing à and then x.
