@@ -5,7 +5,7 @@ body{
     background-color: #000000;
     cursor:none;
     border: #30ff00 solid 3px;
-    height: 1073px;
+    min-height: 900px;
 }
 #circle{
     position:absolute;
