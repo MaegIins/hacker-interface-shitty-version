@@ -5,16 +5,16 @@ let alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm',
 let zoneTxt = document.getElementById('txt');
 let txt = '';
 let lastpressed = '';
-zoneTxt.innerHTML = txt + " >";
+zoneTxt.innerHTML = "> "+txt + "|";
 
 document.onkeypress = (e) => {
     if (e.keyCode === 13) {
-        txt = txt + '<br>';
+        txt = txt + '<br> > ';
     } else if (e.keyCode === 32) {
         txt = txt + '&nbsp;';
     } else if (e.keyCode === 8) {
         txt = txt.slice(0, -1);
-        zoneTxt.innerHTML = txt + " >";
+        zoneTxt.innerHTML = txt + "|";
     } else if (e.keyCode === 120) {
         if (lastpressed === 224) {
             addCustomWords();
@@ -31,7 +31,7 @@ document.onkeypress = (e) => {
         console.log(txt);
     }
 
-    zoneTxt.innerHTML = txt + " >";
+    zoneTxt.innerHTML = "> "+txt + "|";
     lastpressed = e.keyCode;
 }
 
@@ -55,7 +55,7 @@ function clear(){
     let clear = confirm('Do you want to empty the wordlist?');
     if (clear) {
         txt = '';
-        zoneTxt.innerHTML = txt + " >";
+        zoneTxt.innerHTML = "> "+txt + "|";
         alert('Cleared');
     } else {
         alert('ok.');
