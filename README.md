@@ -5,4 +5,7 @@
 
 
 you can add custom words by pressing à and then x.
+
+
+
 you can clear the screen by pressing à and then c.
