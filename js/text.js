@@ -7,7 +7,7 @@ let txt = '';
 let lastpressed = '';
 zoneTxt.innerHTML = "> " + txt + "|";
 
-document.onkeypress = (e) => {
+document.onkeydown = (e) => {
     if (e.keyCode === 13) {
         txt = txt + '<br> > ';
     } else if (e.keyCode === 32) {
@@ -15,12 +15,12 @@ document.onkeypress = (e) => {
     } else if (e.keyCode === 8) {
         txt = txt.slice(0, -1);
         zoneTxt.innerHTML = txt + "|";
-    } else if (e.keyCode === 120) {
-        if (lastpressed === 224) {
+    } else if (e.keyCode === 88) {
+        if (lastpressed === 48) {
             addCustomWords();
         }
     } else if (e.key === 'c') {
-        if (lastpressed === 224) {
+        if (lastpressed === 48) {
             clear();
         }
     } else {
@@ -33,6 +33,8 @@ document.onkeypress = (e) => {
     zoneTxt.innerHTML = "> " + txt + "|";
     lastpressed = e.keyCode;
 }
+
+
 
 
 function addCustomWords() {
