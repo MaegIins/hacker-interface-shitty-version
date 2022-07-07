@@ -1,12 +1,32 @@
+@font-face {
+    font-family: Cascadia;
+    src: url(../assets/CascadiaMono.ttf);
+}
+
+
+
+
 body{
     margin:0;
     padding:0;
     --overflow:hidden;
     background-color: #000000;
     cursor:none;
-    border: #30ff00 solid 3px;
-    min-height: 900px;
+    font-family: Cascadia, serif;
+
 }
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#logo{
+    margin : 20px;
+
+}
+
 #circle{
     position:absolute;
     transform:translate(-50%,-50%);
@@ -14,10 +34,34 @@ body{
     width:35px;
     border-radius:50%;
     border:2px solid #30ff00;
+    z-index: -5;
 }
 
 #txt{
     color: #30ff00;
     font-size: 20px;
-    margin: 20px;
+    margin: 0 20px 0 20px;
+    border: #30ff00 solid 3px;
+    min-height: 740px;
+    padding: 20px;
+}
+
+.credits{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    color: #30ff00;
+    margin-top: 10px;
+}
+
+.credits p{
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #1d8c00;
+
 }
