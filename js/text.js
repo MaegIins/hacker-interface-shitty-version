@@ -1,8 +1,6 @@
 `use strict`;
 
 
-
-
 let access = ['private', 'public', 'protected', '', 'static'];
 let type = ['function', 'class', 'interface', 'constructor'];
 let nom = ['doThis', 'doThat', 'doThisAndThat', 'doThisAndThatAndThat', 'doThisAndThatAndThatAndThat', 'doThisAndThatAndThatAndThatAndThat'];
@@ -10,12 +8,12 @@ let variable = ['tmp', 'name', 'age', 'height', 'weight', 'test'];
 let condition = ['if (', 'while (', 'for ( i = 0;'];
 let operators = ['+', '-', '*', '/', '%', '++', '--', '==', '!=', '>', '<', '>=', '<=', '&&', '||', '!', '=', '+=', '-=', '*=', '/=', '%=', '&=', '|=', '^=', '<<=', '>>=', '>>>='];
 
-let codeStructure = [access, type,nom,'(',variable,')','{',condition,variable, operators, variable,')','{',nom,'(',variable,')',';','}','}' ];
-let j =0;
+let codeStructure = [access, type, nom, '(', variable, ')', '{', condition, variable, operators, variable, ')', '{', nom, '(', variable, ')', ';', '}', '}'];
+let j = 0;
 
 
-
-
+let taille = 150;
+let manu = true;
 let alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', ' ', ' ', ' '];
 let zoneTxt = document.getElementById('txt');
 let txt = '';
@@ -25,7 +23,7 @@ zoneTxt.innerHTML = "> " + txt + "|";
 document.onkeydown = (e) => {
     if (e.keyCode === 13) {
         txt = txt + '<br> > ';
-        if (codeStructure[j-1] !== '{') {
+        if (codeStructure[j - 1] !== '{') {
             j = 0;
         }
     } else if (e.keyCode === 32) {
@@ -41,24 +39,42 @@ document.onkeydown = (e) => {
         if (lastpressed === 48) {
             clear();
         }
-    } else {
-        //for (let i = 0; i < Math.floor(Math.random() * 6) + 2; i++) {
-
-            txt = txt +' '+ codeStructure[j][Math.floor(Math.random() * codeStructure[j].length)];
+    } else if (e.key === 'q') {
+        if (lastpressed === 48) {
+            manu = !manu;
+            if (!manu) {
+                alert('Manual mode activated');
+            }else{
+                alert('Manual mode desactivated');
+            }
+            txt = '';
+            zoneTxt.innerHTML = "> " + txt + "|";
+            j=0;
+        }
+    }else {
+        if (manu) {
+            txt = txt + ' ' + codeStructure[j][Math.floor(Math.random() * codeStructure[j].length)];
             j++;
             if (j === codeStructure.length) {
                 j = 0;
                 txt = txt + '<br> > ';
             }
-        //}
-        console.log(txt);
+
+            console.log(txt);
+        }else{
+            txt = txt+e.key;
+            if (txt.length > taille) {
+                txt = txt+'<br> > ';
+                taille+=158;
+            }
+        }
+
     }
 
     zoneTxt.innerHTML = "> " + txt + "|";
     lastpressed = e.keyCode;
     zoneTxt.scrollTo(0, zoneTxt.scrollHeight);
 }
-
 
 
 function addCustomWords() {
