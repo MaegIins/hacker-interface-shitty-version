@@ -9,10 +9,11 @@
 body{
     margin:0;
     padding:0;
-    --overflow:hidden;
+    overflow:hidden;
     background-color: #000000;
     cursor:none;
     font-family: Cascadia, serif;
+
 
 }
 
@@ -42,8 +43,10 @@ body{
     font-size: 20px;
     margin: 0 20px 0 20px;
     border: #30ff00 solid 3px;
-    min-height: 740px;
+    height: 740px;
     padding: 20px;
+    overflow:scroll;
+    overflow-x:hidden;
 }
 
 .credits{
@@ -64,4 +67,24 @@ a {
     text-decoration: none;
     color: #1d8c00;
 
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #000000;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #30ff00;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #1d8c00;
 }
