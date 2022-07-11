@@ -1,6 +1,21 @@
 `use strict`;
 
 
+
+
+let access = ['private', 'public', 'protected', '', 'static'];
+let type = ['function', 'class', 'interface', 'constructor'];
+let nom = ['doThis', 'doThat', 'doThisAndThat', 'doThisAndThatAndThat', 'doThisAndThatAndThatAndThat', 'doThisAndThatAndThatAndThatAndThat'];
+let variable = ['tmp', 'name', 'age', 'height', 'weight', 'test'];
+let condition = ['if(', 'while(', 'for(i = 0;'];
+let operators = ['+', '-', '*', '/', '%', '++', '--', '==', '!=', '>', '<', '>=', '<=', '&&', '||', '!', '=', '+=', '-=', '*=', '/=', '%=', '&=', '|=', '^=', '<<=', '>>=', '>>>='];
+
+let codeStructure = [access, type,nom,'(',variable,')', '{',condition,variable, operators, variable,')','{',nom,'(',variable,')',';','}','}' ];
+let j =0;
+
+
+
+
 let alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', ' ', ' ', ' '];
 let zoneTxt = document.getElementById('txt');
 let txt = '';
@@ -10,6 +25,9 @@ zoneTxt.innerHTML = "> " + txt + "|";
 document.onkeydown = (e) => {
     if (e.keyCode === 13) {
         txt = txt + '<br> > ';
+        if (codeStructure[j-1] !== '{') {
+            j = 0;
+        }
     } else if (e.keyCode === 32) {
         txt = txt + '&nbsp;';
     } else if (e.keyCode === 8) {
@@ -24,16 +42,21 @@ document.onkeydown = (e) => {
             clear();
         }
     } else {
-        for (let i = 0; i < Math.floor(Math.random() * 6) + 2; i++) {
-            txt = txt + alphabet[Math.floor(Math.random() * alphabet.length)];
-        }
+        //for (let i = 0; i < Math.floor(Math.random() * 6) + 2; i++) {
+
+            txt = txt +' '+ codeStructure[j][Math.floor(Math.random() * codeStructure[j].length)];
+            j++;
+            if (j === codeStructure.length) {
+                j = 0;
+                txt = txt + '<br> > ';
+            }
+        //}
         console.log(txt);
     }
 
     zoneTxt.innerHTML = "> " + txt + "|";
     lastpressed = e.keyCode;
 }
-
 
 
 
