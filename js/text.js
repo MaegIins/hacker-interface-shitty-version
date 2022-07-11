@@ -56,6 +56,7 @@ document.onkeydown = (e) => {
 
     zoneTxt.innerHTML = "> " + txt + "|";
     lastpressed = e.keyCode;
+    zoneTxt.scrollTo(0, zoneTxt.scrollHeight);
 }
 
 
