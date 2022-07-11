@@ -7,10 +7,10 @@ let access = ['private', 'public', 'protected', '', 'static'];
 let type = ['function', 'class', 'interface', 'constructor'];
 let nom = ['doThis', 'doThat', 'doThisAndThat', 'doThisAndThatAndThat', 'doThisAndThatAndThatAndThat', 'doThisAndThatAndThatAndThatAndThat'];
 let variable = ['tmp', 'name', 'age', 'height', 'weight', 'test'];
-let condition = ['if(', 'while(', 'for(i = 0;'];
+let condition = ['if (', 'while (', 'for ( i = 0;'];
 let operators = ['+', '-', '*', '/', '%', '++', '--', '==', '!=', '>', '<', '>=', '<=', '&&', '||', '!', '=', '+=', '-=', '*=', '/=', '%=', '&=', '|=', '^=', '<<=', '>>=', '>>>='];
 
-let codeStructure = [access, type,nom,'(',variable,')', '{',condition,variable, operators, variable,')','{',nom,'(',variable,')',';','}','}' ];
+let codeStructure = [access, type,nom,'(',variable,')','{',condition,variable, operators, variable,')','{',nom,'(',variable,')',';','}','}' ];
 let j =0;
 
 
