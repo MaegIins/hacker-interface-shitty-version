@@ -1,5 +1,15 @@
 `use strict`;
 
+
+/**
+ * Script managing the cursor
+ * @author: Maeglins
+ */
+
+
+
+
+
 //get th cursor
 let circle = document.getElementById('circle');
 

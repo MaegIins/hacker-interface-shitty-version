@@ -1,5 +1,14 @@
 `use strict`;
 
+/**
+ * Script managing the text of the page
+ * @author: Maeglins
+ */
+
+
+
+
+
 //lib for the structure of the text
 let access = ['private', 'public', 'protected', '', 'static'];
 let type = ['function', 'class', 'interface', 'constructor'];
@@ -150,7 +159,9 @@ document.onkeydown = (e) => {
     zoneTxt.scrollTo(0, zoneTxt.scrollHeight);
 }
 
-//function to add a custom word                                                                                      //OBSELETE
+/*
+ *function to add a custom word                                                                                      //OBSELETE
+ */
 function addCustomWords() {                                                                                          //OBSELETE
     let tmp = false;                                                                                                 //OBSELETE
     let clear = confirm('Do you want to empty the wordlist?');                                                       //OBSELETE
@@ -182,7 +193,9 @@ function addCustomWords() {                                                     
     alphabet.push(" " + word + " ");                                                                                 //OBSELETE
 }                                                                                                                    //OBSELETE
 
-//function to clear the text
+/*
+ *function to clear the text
+ */
 function clear() {
     //ask the user if he really want to clear the text
     let clear = confirm('Do you want to empty the wordlist?');
