@@ -7,8 +7,11 @@ let nom = ['doThis', 'doThat', 'doThisAndThat', 'doThisAndThatAndThat', 'doThisA
 let variable = ['tmp', 'name', 'age', 'height', 'weight', 'test'];
 let condition = ['if (', 'while (', 'for ( i = 0;'];
 let operators = ['+', '-', '*', '/', '%', '++', '--', '==', '!=', '>', '<', '>=', '<=', '&&', '||', '!', '=', '+=', '-=', '*=', '/=', '%=', '&=', '|=', '^=', '<<=', '>>=', '>>>='];
+let sautLigne = ['<br> &nbsp'];
+let space = ['&nbsp; &nbsp; &nbsp; &nbsp;'];
 
-let codeStructure = [access, type, nom, '(', variable, ')', '{', condition, variable, operators, variable, ')', '{', nom, '(', variable, ')', ';', '}', '}'];
+
+let codeStructure = [access, type, nom, '(', variable, ')', '{',sautLigne, space, condition, variable, operators, variable, ')', '{',sautLigne, space,space, nom, '(', variable, ')', ';',sautLigne, space, '}',sautLigne ,'}'];
 let j = 0;
 
 
@@ -22,9 +25,11 @@ zoneTxt.innerHTML = "> " + txt + "|";
 
 document.onkeydown = (e) => {
     if (e.keyCode === 13) {
-        txt = txt + '<br> > ';
-        if (codeStructure[j - 1] !== '{') {
+        if (j<codeStructure.length && j!==0) {
             j = 0;
+            txt = txt + '<br> > <strong>ERROR</strong> : incorrect structure <br> >';
+        }else{
+            txt = txt + '<br> > ';
         }
     } else if (e.keyCode === 32) {
         txt = txt + '&nbsp;';
