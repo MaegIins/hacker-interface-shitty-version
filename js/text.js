@@ -11,10 +11,12 @@ let sautLigne = ['<br> &nbsp'];
 let space = ['&nbsp; &nbsp; &nbsp; &nbsp;'];
 
 
-let codeStructure = [access, type, nom, '(', variable, ')', '{',sautLigne, space, condition, variable, operators, variable, ')', '{',sautLigne, space,space, nom, '(', variable, ')', ';',sautLigne, space, '}',sautLigne ,'}'];
+let codeStructure = [access, type, nom, '(', variable, ')', '{', sautLigne, space, condition, variable, operators, variable, ')', '{', sautLigne, space, space, nom, '(', variable, ')', ';', sautLigne, space, '}', sautLigne, '}'];
 let j = 0;
+let f = 0;
 
-
+let tailleEcran = window.innerWidth;
+console.log(tailleEcran);
 let taille = 150;
 let manu = true;
 let alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', ' ', ' ', ' '];
@@ -25,16 +27,30 @@ zoneTxt.innerHTML = "> " + txt + "|";
 
 document.onkeydown = (e) => {
     if (e.keyCode === 13) {
-        if (j<codeStructure.length && j!==0) {
+        if (j < codeStructure.length && j !== 0) {
             j = 0;
             txt = txt + '<br> > <strong>ERROR</strong> : incorrect structure <br> >';
-        }else{
+        } else {
             txt = txt + '<br> > ';
+        }
+
+        if (!manu) {
+
+            console.log(taille + ' -= 158+' + f + ' = ' + (158 + f));
+            f = 0;
         }
     } else if (e.keyCode === 32) {
         txt = txt + '&nbsp;';
+
+        if (!manu) {
+            f++;
+        }
     } else if (e.keyCode === 8) {
         txt = txt.slice(0, -1);
+
+        if (!manu) {
+            f--;
+        }
         zoneTxt.innerHTML = txt + "|";
     } else if (e.keyCode === 88) {
         if (lastpressed === 48) {
@@ -68,9 +84,10 @@ document.onkeydown = (e) => {
             console.log(txt);
         } else {
             txt = txt + e.key;
-            if (txt.length > taille) {
+            f++;
+            if (f > taille) {
                 txt = txt + '<br> > ';
-                taille += 158;
+                f = 0;
             }
         }
 
@@ -79,6 +96,7 @@ document.onkeydown = (e) => {
     zoneTxt.innerHTML = "> " + txt + "|";
     lastpressed = e.keyCode;
     zoneTxt.scrollTo(0, zoneTxt.scrollHeight);
+    console.log(taille);
 }
 
 
