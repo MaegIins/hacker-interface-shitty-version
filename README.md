@@ -1,10 +1,9 @@
-# hacker interface shitty version  
+# hacker interface shitty version
+
 ## Fake hacker interface, but it sucks because i'm a fraud
 
-    
     []: # Language: HTML/CSS/JS
     []: # Path: hacker-interface-shitty-version\index.html
-    
 
 *Still there but obselested*  
 you can add custom words by pressing à and then x.

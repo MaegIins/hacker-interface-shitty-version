@@ -4,53 +4,52 @@
 }
 
 
-
-
-body{
-    margin:0;
-    padding:0;
-    overflow:hidden;
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
     background-color: #000000;
-    cursor:none;
+    cursor: none;
     font-family: Cascadia, serif;
     height: 100vh;
 
 
 }
 
-.container{
+.container {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
-#logo{
-    margin : 20px;
+
+#logo {
+    margin: 20px;
 
 }
 
-#circle{
-    position:absolute;
-    transform:translate(-50%,-50%);
-    --height:35px;
-    --width:35px;
-    --border-radius:50%;
-    --border:2px solid #30ff00;
+#circle {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    --height: 35px;
+    --width: 35px;
+    --border-radius: 50%;
+    --border: 2px solid #30ff00;
     z-index: -5;
 }
 
-#txt{
+#txt {
     color: #30ff00;
     font-size: 20px;
     margin: 0 20px 0 20px;
     border: #30ff00 solid 3px;
     height: 70%;
     padding: 20px;
-    overflow:scroll;
-    overflow-x:hidden;
+    overflow: scroll;
+    overflow-x: hidden;
 }
 
-.credits{
+.credits {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -60,7 +59,7 @@ body{
     margin-top: 10px;
 }
 
-.credits p{
+.credits p {
     margin: 0;
 }
 

@@ -44,14 +44,14 @@ document.onkeydown = (e) => {
             manu = !manu;
             if (!manu) {
                 alert('Manual mode activated');
-            }else{
+            } else {
                 alert('Manual mode desactivated');
             }
             txt = '';
             zoneTxt.innerHTML = "> " + txt + "|";
-            j=0;
+            j = 0;
         }
-    }else {
+    } else {
         if (manu) {
             txt = txt + ' ' + codeStructure[j][Math.floor(Math.random() * codeStructure[j].length)];
             j++;
@@ -61,11 +61,11 @@ document.onkeydown = (e) => {
             }
 
             console.log(txt);
-        }else{
-            txt = txt+e.key;
+        } else {
+            txt = txt + e.key;
             if (txt.length > taille) {
-                txt = txt+'<br> > ';
-                taille+=158;
+                txt = txt + '<br> > ';
+                taille += 158;
             }
         }
 
