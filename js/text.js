@@ -14,7 +14,7 @@ let access = ['private', 'public', 'protected', '', 'static'];
 let type = ['function', 'class', 'interface', 'constructor'];
 let nom = ['doThis', 'doThat', 'doThisAndThat', 'doThisAndThatAndThat', 'doThisAndThatAndThatAndThat', 'doThisAndThatAndThatAndThatAndThat','estVivant()','positionner()','seTranslaterX()','seTranslaterY()','evoluer()','avancer()','isEmpty()','toString()','lancerSort()','attaquer()','tirer()','avancer()','placer()','genererLaby()','genererCarte()'
 ];
-let variable = ['tmp', 'name', 'age', 'height', 'weight', 'test','Monstre','Troll','Gobelin','Mage','Magicien','Guerrier','Barbare','UnPoint','Carre','Rectangle','Cercle','Losange','Voiture','Lampe','Position','Chemin','Path','Sorcier','Valkyrie','Geant','Necromancien','Voleur','Druide','Pretre','LoupGarou','Chaman','ListeTriee','ListeChainee','Arc','Epee','Hache','Haast','Dague','Labyrinthe','Map','Carte'
+let variable = ['tmp', 'name', 'age', 'height', 'weight', 'test','monster','troll','tobelin','mage','sorcerer','warrior','barbarian','aPoint','square','rectangle','circle','Losange','car','lamp','position','way','Path','wizard','valkyrie','giant','necromancer','rogue','druid','priest','werewolf','chaman','ListeTriee','ListeChainee','bow','sword','axe','Haast','dagger','Labyrinthe','Map','Carte'
 ];
 let condition = ['if (', 'while (', 'for ( i = 0;'];
 let operators = ['+', '-', '*', '/', '%', '++', '--', '==', '!=', '>', '<', '>=', '<=', '&&', '||', '!', '=', '+=', '-=', '*=', '/=', '%=', '&=', '|=', '^=', '<<=', '>>=', '>>>='];
