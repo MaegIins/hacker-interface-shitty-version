@@ -86,12 +86,12 @@ document.onkeydown = (e) => {
         // add a pipe to the end of the text
         zoneTxt.innerHTML = txt + "|";
         //if the user press x
-    } else if (e.keyCode === 88) {              //OBSELETE
-        //if the last pressed key is à          //OBSELETE
-        if (lastpressed === 48) {               //OBSELETE
-            //function to add a custom word     //OBSELETE
-            addCustomWords();                   //OBSELETE
-        }                                       //OBSELETE
+    } else if (e.keyCode === 88) {              //OBSOLETE
+        //if the last pressed key is à          //OBSOLETE
+        if (lastpressed === 48) {               //OBSOLETE
+            //function to add a custom word     //OBSOLETE
+            addCustomWords();                   //OBSOLETE
+        }                                       //OBSOLETE
         //if the user press c
     } else if (e.key === 'c') {
         //if the last pressed key is à
@@ -162,38 +162,38 @@ document.onkeydown = (e) => {
 }
 
 /*
- *function to add a custom word                                                                                      //OBSELETE
+ *function to add a custom word                                                                                      //OBSOLETE
  */
-function addCustomWords() {                                                                                          //OBSELETE
-    let tmp = false;                                                                                                 //OBSELETE
-    let clear = confirm('Do you want to empty the wordlist?');                                                       //OBSELETE
-    if (clear) {                                                                                                     //OBSELETE
-        tmp = true;                                                                                                  //OBSELETE
-        //alphabet = [];                                                                                             //OBSELETE
-    }                                                                                                                //OBSELETE
-    let word = prompt('Your word:');                                                                         //OBSELETE
-    if (word !== null) {  // if the user didn't cancel                                                               //OBSELETE
-        if (tmp) {  // if the user wanted to empty the wordlist                                                      //OBSELETE
-            //emptu the wordlist                                                                                     //OBSELETE
-            alphabet = [];                                                                                           //OBSELETE
-            //alert the user                                                                                         //OBSELETE
-            alert('Emptied wordlist and Word ' + word + ' added');                                                   //OBSELETE
-        } else {// if the user didn't empty the wordlist                                                             //OBSELETE
-            //don't empty the wordlist and alert the user                                                            //OBSELETE
-            alert('Word ' + word + ' added');                                                                        //OBSELETE
-        }                                                                                                            //OBSELETE
-    } else {   // if the user cancelled                                                                              //OBSELETE
-        if (tmp) { // if the user wanted to empty the wordlist                                                       //OBSELETE
-            //don't empty the wordlist and alert the user                                                            //OBSELETE
-            alert('No word added, and the wordlist haven\'t been emptied because it must have at least one word');   //OBSELETE
-        } else { // if the user didn't empty the wordlist                                                            //OBSELETE
-            //don't empty the wordlist and alert the user                                                            //OBSELETE
-            alert('No word added, you suck.');                                                                       //OBSELETE
-        }                                                                                                            //OBSELETE
-    }                                                                                                                //OBSELETE
-    //word added to the alphabet                                                                                     //OBSELETE
-    alphabet.push(" " + word + " ");                                                                                 //OBSELETE
-}                                                                                                                    //OBSELETE
+function addCustomWords() {                                                                                          //OBSOLETE
+    let tmp = false;                                                                                                 //OBSOLETE
+    let clear = confirm('Do you want to empty the wordlist?');                                                       //OBSOLETE
+    if (clear) {                                                                                                     //OBSOLETE
+        tmp = true;                                                                                                  //OBSOLETE
+        //alphabet = [];                                                                                             //OBSOLETE
+    }                                                                                                                //OBSOLETE
+    let word = prompt('Your word:');                                                                         //OBSOLETE
+    if (word !== null) {  // if the user didn't cancel                                                               //OBSOLETE
+        if (tmp) {  // if the user wanted to empty the wordlist                                                      //OBSOLETE
+            //emptu the wordlist                                                                                     //OBSOLETE
+            alphabet = [];                                                                                           //OBSOLETE
+            //alert the user                                                                                         //OBSOLETE
+            alert('Emptied wordlist and Word ' + word + ' added');                                                   //OBSOLETE
+        } else {// if the user didn't empty the wordlist                                                             //OBSOLETE
+            //don't empty the wordlist and alert the user                                                            //OBSOLETE
+            alert('Word ' + word + ' added');                                                                        //OBSOLETE
+        }                                                                                                            //OBSOLETE
+    } else {   // if the user cancelled                                                                              //OBSOLETE
+        if (tmp) { // if the user wanted to empty the wordlist                                                       //OBSOLETE
+            //don't empty the wordlist and alert the user                                                            //OBSOLETE
+            alert('No word added, and the wordlist haven\'t been emptied because it must have at least one word');   //OBSOLETE
+        } else { // if the user didn't empty the wordlist                                                            //OBSOLETE
+            //don't empty the wordlist and alert the user                                                            //OBSOLETE
+            alert('No word added, you suck.');                                                                       //OBSOLETE
+        }                                                                                                            //OBSOLETE
+    }                                                                                                                //OBSOLETE
+    //word added to the alphabet                                                                                     //OBSOLETE
+    alphabet.push(" " + word + " ");                                                                                 //OBSOLETE
+}                                                                                                                    //OBSOLETE
 
 /*
  *function to clear the text

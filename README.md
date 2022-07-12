@@ -5,7 +5,7 @@
     []: # Language: HTML/CSS/JS
     []: # Path: hacker-interface-shitty-version\index.html
 
-*Still there but obselested*  
+*Still there but obsoleted*  
 you can add custom words by pressing à and then x.
 
 you can enter the manual mode by pressing à and then q. (and quit it by pressing à and then q again)
