@@ -15,8 +15,8 @@ let codeStructure = [access, type, nom, '(', variable, ')', '{', sautLigne, spac
 let j = 0;
 let f = 0;
 
-let tailleEcran = window.innerWidth;
-console.log(tailleEcran);
+
+
 let taille = 150;
 let manu = true;
 let alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', ' ', ' ', ' '];
@@ -35,8 +35,6 @@ document.onkeydown = (e) => {
         }
 
         if (!manu) {
-
-            console.log(taille + ' -= 158+' + f + ' = ' + (158 + f));
             f = 0;
         }
     } else if (e.keyCode === 32) {
@@ -85,6 +83,7 @@ document.onkeydown = (e) => {
         } else {
             txt = txt + e.key;
             f++;
+            taille = window.innerWidth*0.076;
             if (f > taille) {
                 txt = txt + '<br> > ';
                 f = 0;
@@ -96,7 +95,6 @@ document.onkeydown = (e) => {
     zoneTxt.innerHTML = "> " + txt + "|";
     lastpressed = e.keyCode;
     zoneTxt.scrollTo(0, zoneTxt.scrollHeight);
-    console.log(taille);
 }
 
 
