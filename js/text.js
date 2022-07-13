@@ -53,7 +53,7 @@ document.onkeydown = (e) => {
             //return to the start of the structure
             j = 0;
             //display an error
-            txt = txt + '<br> > <strong>ERROR</strong> : incorrect structure <br> >';
+            txt = txt + '<br> > <div class = "erreur"><strong>ERROR</strong> : incorrect structure </div><br> >';
         } else { //if the user press enter while at the start of the structure or not in the middle of it //even if it's in manual mode
             //break
             txt = txt + '<br> > ';
