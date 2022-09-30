@@ -4,13 +4,15 @@
 
     []: # Language: HTML/CSS/JS
     []: # Path: hacker-interface-shitty-version\index.html
+    []: # Test the code on : http://maeglins.fun
 
-*Still there but obsoleted*  
-you can add custom words by pressing à and then x.
 
 you can enter the manual mode by pressing à and then q. (and quit it by pressing à and then q again)
 
 you can clear the screen by pressing à and then c.
+
+*Still there but obsoleted*  
+you can add custom words by pressing à and then x.
 
 author: [MaegIins](https://github.com/MaegIins)  
   
